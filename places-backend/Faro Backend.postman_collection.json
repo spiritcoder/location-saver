@@ -1,0 +1,217 @@
+{
+	"info": {
+		"_postman_id": "8a328ef9-72e8-4aab-bd75-6806395936b5",
+		"name": "Faro Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sign Up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Ikechukwu Apeh\",\n    \"password\": \"ikechukwuapeh\",\n    \"email\": \"ikechukwuapeh@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3007/api/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3007",
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"password\": \"ikechukwuapeh\",\n    \"email\": \"ikechukwuapeh@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3007/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3007",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add A Place",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"namer\",\n    \"image_url\": \"https://upload.wikimedia.org/wikipedia/commons/8/8e/Flag_map_of_Germany.svg\",\n    \"latitude\": \"51.7704175\",\n    \"longitude\": \"14.32996741\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3007/api/place/addPlace",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3007",
+					"path": [
+						"api",
+						"place",
+						"addPlace"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all Places",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3007/api/place/getAllPlaces",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3007",
+					"path": [
+						"api",
+						"place",
+						"getAllPlaces"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get A Place",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3007/api/place/getAPlace/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3007",
+					"path": [
+						"api",
+						"place",
+						"getAPlace",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a place with Latitude and longitude(first param is latitude, the second is longitude)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3007/api/place/getAPlaceWithLatLng/51.539075262036/11.766357421875",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3007",
+					"path": [
+						"api",
+						"place",
+						"getAPlaceWithLatLng",
+						"51.539075262036",
+						"11.766357421875"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update A Place",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"name\": \"Igbo Efon 2\",\n    \"image_url\": \"https://kskssjs.com/kk.png\",\n    \"latitude\": \"76.4883\",\n    \"longitude\": \"38.37747\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3007/api/place/updateAPlace",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3007",
+					"path": [
+						"api",
+						"place",
+						"updateAPlace"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete A Place",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3007/api/place/deleteAPlace/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3007",
+					"path": [
+						"api",
+						"place",
+						"deleteAPlace",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
